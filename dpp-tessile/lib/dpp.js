@@ -1,4 +1,4 @@
-export const BASE = "https://dpp.tuodominio.com";
+export const BASE = process.env.NEXT_PUBLIC_BASE_URL || "https://dpp.tuodominio.com";
 
 export function normalizeGtin(g) {
   return String(g || "").replace(/\s/g, "").padStart(14, "0");
